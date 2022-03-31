@@ -1,0 +1,102 @@
+html, body {
+  margin: 0; padding: 0;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+main{
+  background-image: linear-gradient(120deg, #434343 15%, black 100%);
+  backdrop-filter: blur(2px);
+  padding: 5px;
+  width: 280px;
+}
+
+.miniDisplay{
+  text-align: right;
+  font-size: 15px;
+  width: calc(100% - 30px);
+  position: absolute;
+  top: 25px;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  opacity: 80%;
+}
+
+.display{
+  background: none;
+  border: none;
+  outline: none;
+  filter: blur(0px);
+  text-align: right;
+  height: 120px;
+  width: calc(100% - 30px);
+  margin-left: 10px;
+  color: transparent;
+  text-shadow : 0 0 0 #FFFFFF;
+  font-family: "Ubuntu", sans-serifa;
+  font-size: 34px;
+  cursor: default;
+}
+input::selection{
+  opacity: 100%;
+}
+
+.panel{
+  color: white;
+  font-family: "Ubuntu", sans-serifa;
+  display: grid;
+}
+
+.numbersAndSimbols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  height: 230px;
+}
+
+.digits{
+  cursor: pointer;
+  user-select: none;
+  display:flex;
+  text-align: center;
+}
+
+.digits:hover{
+  background-color:  rgba(6,6,6,.3);
+  box-shadow: 0px 0px 50px 1px rgba(220,220,220,.4) inset;
+  outline: .5px solid rgba(255,255,255,.4);
+  outline: -.5px;
+  transition: .15s;
+}
+
+.numbers{
+  font-size: 20px;
+  background-color: rgba(6,6,6,.8);
+}
+.simbols{
+  font-size: 18px;
+  background-color: rgba(6,6,6,.5);
+}
+.equal{
+  background-color: rgba(255,175,0,.85);
+  cursor: pointer;
+  user-select: none;
+  display:flex;
+  text-align: center;
+  transition: .2s;
+}
+.equal:hover{
+  background-color: rgba(255,175,0);
+  outline: .5px solid rgba(255,255,255,.4);
+  outline: -.5px;
+}
+
+p{
+  margin: auto;
+  pointer-events: none;
+}
